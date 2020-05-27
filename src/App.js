@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+import { Layout } from 'antd';
 import './App.scss';
 
 import Papa from 'papaparse';
 
 function App() {
+  const { Header, Footer, Content } = Layout;
   const [sheetData, setSheetData] = useState([]);
   const [sheetHeaders, setSheetHeaders] = useState([]);
 
@@ -29,11 +30,11 @@ function App() {
 // 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Momi</h1>
-      </header>
-      <main>
+    <Layout className="App">
+      <Header className="AppHeader">
+        <h1 className="AppName">Momi</h1>
+      </Header>
+      <Content>
         {!!sheetData && <table>
           <caption>Sheet content preview</caption>
           <thead>
@@ -51,8 +52,9 @@ function App() {
         </tr>)}
           </tbody>
         </table>}
-      </main>
-    </div>
+      </Content>
+      <Footer>&copy; 2020 by fadehelix</Footer>
+    </Layout>
   );
 }
 
