@@ -66,12 +66,12 @@ function App() {
         <Space direction="vertical">
           <Exercise phrase={randomPhrase} />
           <Space >
-            <Button onClick={handleRefreshExercise} >Get Random Phrase</Button>
-            <Button onClick={handleShowDrawer}>Display all spreadsheet data</Button>
+            <Button type="primary" onClick={handleRefreshExercise} >Get Random Phrase</Button>
+            <Button onClick={handleShowDrawer}>Show dictionary</Button>
           </Space>
         </Space>
         <Drawer
-          title="All spreadsheet data"
+          title="Dictionary"
           closable={true}
           onClose={handleHideDrawer}
           visible={showDrawer}

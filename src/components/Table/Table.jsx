@@ -12,7 +12,6 @@ const Table = props => {
 
   return(
     <table>
-          <caption>Sheet content preview</caption>
           <thead>
             <tr>
               <th>{tableHeaders[0]}</th>
