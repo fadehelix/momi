@@ -38,15 +38,14 @@ const Exercise = ({phrase}) => {
   return(
     phrase ? 
     <div className="Exercise">
-      <Space direction="vertical">
-      <div className="Question">
-        <span>English phrase:</span>
-        <p>{phrase.en}</p>
-      </div>
+      <Space direction="horizontal">
+      {/* <div className="Question">
+        {phrase.en}
+      </div> */}
       <div className="Answer">
         <Form form={form} layout="inline">
           <Form.Item 
-            label="Polish Translation" 
+            label={phrase.en}
             name="answer" 
             validateStatus={answerValidation.status} 
             help={answerValidation.msg}
@@ -61,10 +60,10 @@ const Exercise = ({phrase}) => {
           </Form.Item>
         </Form>
       </div>
+      </Space>
       <div className="Context">
         {phrase.context}
       </div>
-      </Space>
     </div> : null
   )
 };
