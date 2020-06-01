@@ -1,0 +1,6 @@
+.ant-card-head-title {
+  text-transform: lowercase;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

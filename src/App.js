@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import { Button, Drawer, Layout, Spin, Space } from 'antd';
+import { Button, Drawer, Layout, Spin, Space} from 'antd';
 import Table from './components/Table/Table';
 import './App.scss';
+import './ant-design.overrides.scss';
 
 import Papa from 'papaparse';
 import Exercise from './components/Exercise/Exercise';
@@ -64,8 +65,10 @@ function App() {
       <Content className="Content">
         <Space direction="vertical">
           <Exercise phrase={randomPhrase} />
-          <Button onClick={handleRefreshExercise} >Get Random Phrase</Button>
-          <Button onClick={handleShowDrawer}>Display all spreadsheet data</Button>
+          <Space >
+            <Button onClick={handleRefreshExercise} >Get Random Phrase</Button>
+            <Button onClick={handleShowDrawer}>Display all spreadsheet data</Button>
+          </Space>
         </Space>
         <Drawer
           title="All spreadsheet data"

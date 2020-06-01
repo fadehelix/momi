@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { Button, Form, Input, Space } from 'antd';
+import { Button, Card, Form, Input, Space } from 'antd';
+import Context from './Context/Context';
 
 import './Exercise.scss';
 
@@ -43,9 +44,15 @@ const Exercise = ({phrase}) => {
         {phrase.en}
       </div> */}
       <div className="Answer">
-        <Form form={form} layout="inline">
+        
+      </div>
+      </Space>
+      
+
+      <Card title={phrase.en} bordered={false} style={{ width: 300 }}>
+      <Form form={form} layout="vertical">
           <Form.Item 
-            label={phrase.en}
+            label="Translation"
             name="answer" 
             validateStatus={answerValidation.status} 
             help={answerValidation.msg}
@@ -59,11 +66,8 @@ const Exercise = ({phrase}) => {
             </Button>
           </Form.Item>
         </Form>
-      </div>
-      </Space>
-      <div className="Context">
-        {phrase.context}
-      </div>
+        <Context text={phrase.context} phrase={phrase.en}/>
+      </Card>
     </div> : null
   )
 };
