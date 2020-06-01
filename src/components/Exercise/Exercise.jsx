@@ -52,7 +52,7 @@ const Exercise = ({phrase}) => {
             help={answerValidation.msg}
             hasFeedback
           >
-            <Input onChange={handleAnswerChange} value={answer}/>
+            <Input onChange={handleAnswerChange} value={answer} autoComplete="off"/>
           </Form.Item>
           <Form.Item >
             <Button type="primary" htmlType="submit" onClick={handleCheck}>
