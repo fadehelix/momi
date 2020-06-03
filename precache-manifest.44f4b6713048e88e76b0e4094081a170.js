@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "840b717c68ee723f27100bcb00552eb0",
+    "revision": "130faa098889212ed8b137f24c403446",
     "url": "/momi/index.html"
   },
   {
-    "revision": "5fc515f626f0c9fe3a96",
+    "revision": "fdbd266747366d505ec1",
     "url": "/momi/static/css/2.2908a31a.chunk.css"
   },
   {
-    "revision": "5b9a984a29224b89afa4",
+    "revision": "c0d274271911505d76ac",
     "url": "/momi/static/css/main.a689ed4f.chunk.css"
   },
   {
-    "revision": "5fc515f626f0c9fe3a96",
-    "url": "/momi/static/js/2.2b476f46.chunk.js"
+    "revision": "fdbd266747366d505ec1",
+    "url": "/momi/static/js/2.498e11e0.chunk.js"
   },
   {
     "revision": "67b2218b34fc0c291394ab1ce7aeb55f",
-    "url": "/momi/static/js/2.2b476f46.chunk.js.LICENSE.txt"
+    "url": "/momi/static/js/2.498e11e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b9a984a29224b89afa4",
-    "url": "/momi/static/js/main.51402750.chunk.js"
+    "revision": "c0d274271911505d76ac",
+    "url": "/momi/static/js/main.19c9b4b5.chunk.js"
   },
   {
     "revision": "65990b665e66cb498e87",
