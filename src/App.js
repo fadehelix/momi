@@ -64,11 +64,8 @@ function App() {
       : 
       <Content className="Content">
         <Space direction="vertical">
-          <Exercise phrase={randomPhrase} />
-          <Space >
-            <Button type="primary" onClick={handleRefreshExercise} >Get Random Phrase</Button>
-            <Button onClick={handleShowDrawer}>Show dictionary</Button>
-          </Space>
+          <Exercise phrase={randomPhrase} refresh={handleRefreshExercise}/>
+          <Button onClick={handleShowDrawer}>Show dictionary</Button>
         </Space>
         <Drawer
           title="Dictionary"

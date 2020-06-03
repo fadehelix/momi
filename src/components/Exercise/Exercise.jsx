@@ -20,7 +20,7 @@ function validateAnswer(given, correct) {
   }
 }
 
-const Exercise = ({phrase}) => {
+const Exercise = ({phrase, refresh}) => {
 
   const [form] = Form.useForm();
   const [answerValidation, setAnswerValidation] = useState({
@@ -67,6 +67,10 @@ const Exercise = ({phrase}) => {
             <Button type="primary" htmlType="submit" onClick={handleCheck}>
               Check
             </Button>
+            <Button type="default" htmlType="submit" onClick={() => refresh()}>
+              Refresh
+            </Button>
+
             <Tooltip title={phrase.pl} color="gold">
               <Button type="link">Correct answer</Button>
             </Tooltip>
