@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Button, Card, Form, Input, Space, Tooltip } from 'antd';
+import {InfoCircleFilled} from '@ant-design/icons';
 import Context from './Context/Context';
 
 import './Exercise.scss';
@@ -18,6 +19,15 @@ function validateAnswer(given, correct) {
   } else {
     return setValidationStatus('error', 'Wrong answer :(')
   }
+}
+
+const ExerciseTitle = ({phrase}) => {
+  return(
+    <Space>
+      {phrase.en}
+      <Tooltip title={phrase.pl} ><InfoCircleFilled /></Tooltip>
+    </Space>
+  )
 }
 
 const Exercise = ({phrase, refresh}) => {
@@ -51,7 +61,7 @@ const Exercise = ({phrase, refresh}) => {
       </div>
       </Space>
       
-      <Card title={phrase.en} bordered={false} style={{ width: 300 }}>
+      <Card title={<ExerciseTitle phrase={phrase}/>} bordered={false} style={{ width: 300 }}>
       <Form form={form} layout="vertical">
           <Form.Item 
             label="Translation"
@@ -64,16 +74,12 @@ const Exercise = ({phrase, refresh}) => {
           </Form.Item>
           <Form.Item >
             <Space>
-            <Button type="primary" htmlType="submit" onClick={handleCheck}>
-              Check
-            </Button>
-            <Button type="default" htmlType="submit" onClick={() => refresh()}>
-              Refresh
-            </Button>
-
-            <Tooltip title={phrase.pl} color="gold">
-              <Button type="link">Correct answer</Button>
-            </Tooltip>
+              <Button type="primary" htmlType="submit" onClick={handleCheck}>
+                Check
+              </Button>
+              <Button type="default" htmlType="submit" onClick={() => refresh()}>
+                Refresh
+              </Button>
             </Space>
           </Form.Item>
         </Form>
