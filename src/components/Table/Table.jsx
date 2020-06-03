@@ -10,6 +10,10 @@ const Table = props => {
     setTableHeaders(Object.keys(data[0]));
   }, [data])
 
+  const formatPhraseContext = (context, phrase)=> {
+    return context.replace(new RegExp(phrase, 'i'), `<span style="font-weight: bold">${phrase}</span>`)
+  }
+
   return(
     <table>
           <thead>
@@ -23,7 +27,7 @@ const Table = props => {
             {!!tableData && tableData.map(row => <tr key={Math.random().toString()}>
               <td>{row[tableHeaders[0]]}</td>
               <td>{row[tableHeaders[1]]}</td>
-              <td>{row[tableHeaders[2]]}</td>
+              <td dangerouslySetInnerHTML={{__html: formatPhraseContext(row[tableHeaders[2]], row[tableHeaders[0]])}}></td>
             </tr>)}
           </tbody>
         </table>
