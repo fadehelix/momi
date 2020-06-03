@@ -56,6 +56,7 @@ function App() {
     <Layout className="App">
       <Header className="AppHeader">
         <h1 className="AppName">Momi</h1>
+        <p className="AppSlogan">English - Polish scrum dictionary </p>
       </Header>
       {!sheetData.length ? 
       <Content className="Content">

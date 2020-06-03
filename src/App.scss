@@ -13,9 +13,18 @@ table {
   height: 100vh;
 }
 .AppHeader {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
   & > * {
     color: white;
+    margin-right: 10px;
+    margin-bottom: 0.5em;
   }
+}
+.AppSlogan {
+  font-size: .8rem;
 }
 
 .Content {
