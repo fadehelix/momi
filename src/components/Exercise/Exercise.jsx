@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Card, Form, Input, Space } from 'antd';
+import { Button, Card, Form, Input, Space, Tooltip } from 'antd';
 import Context from './Context/Context';
 
 import './Exercise.scss';
@@ -51,7 +51,6 @@ const Exercise = ({phrase}) => {
       </div>
       </Space>
       
-
       <Card title={phrase.en} bordered={false} style={{ width: 300 }}>
       <Form form={form} layout="vertical">
           <Form.Item 
@@ -64,9 +63,14 @@ const Exercise = ({phrase}) => {
             <Input onChange={handleAnswerChange} value={answer} autoComplete="off"/>
           </Form.Item>
           <Form.Item >
+            <Space>
             <Button type="primary" htmlType="submit" onClick={handleCheck}>
               Check
             </Button>
+            <Tooltip title={phrase.pl} color="gold">
+              <Button type="link">Correct answer</Button>
+            </Tooltip>
+            </Space>
           </Form.Item>
         </Form>
         <Context text={phrase.context} phrase={phrase.en}/>
