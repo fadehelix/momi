@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "130faa098889212ed8b137f24c403446",
+    "revision": "072389bce755ebfdc3467f87d7645534",
     "url": "/momi/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/momi/static/css/2.2908a31a.chunk.css"
   },
   {
-    "revision": "c0d274271911505d76ac",
-    "url": "/momi/static/css/main.a689ed4f.chunk.css"
+    "revision": "18519b9019f88218592b",
+    "url": "/momi/static/css/main.69240eb1.chunk.css"
   },
   {
     "revision": "fdbd266747366d505ec1",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/momi/static/js/2.498e11e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0d274271911505d76ac",
-    "url": "/momi/static/js/main.19c9b4b5.chunk.js"
+    "revision": "18519b9019f88218592b",
+    "url": "/momi/static/js/main.7892606b.chunk.js"
   },
   {
     "revision": "65990b665e66cb498e87",
