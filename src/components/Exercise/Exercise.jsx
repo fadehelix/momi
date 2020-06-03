@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button, Card, Form, Input, Space } from 'antd';
 import Context from './Context/Context';
 
@@ -27,7 +27,13 @@ const Exercise = ({phrase}) => {
     status: null,
     msg: ''
   });
-  const [answer, setAnswer] = useState();
+  const [answer, setAnswer] = useState("");
+
+  useEffect(() => {
+    setAnswer("");
+    setAnswerValidation(setValidationStatus(null, ""))
+    form.resetFields();
+  }, [phrase])
 
   const handleAnswerChange = event => {
     setAnswer(event.target.value);
@@ -35,16 +41,13 @@ const Exercise = ({phrase}) => {
 
   const handleCheck = () => {
     setAnswerValidation(validateAnswer(answer, phrase.pl))
+    setAnswer("")
   }
   return(
     phrase ? 
     <div className="Exercise">
       <Space direction="horizontal">
-      {/* <div className="Question">
-        {phrase.en}
-      </div> */}
       <div className="Answer">
-        
       </div>
       </Space>
       
