@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Card, Form, Input, Space, Tooltip } from 'antd';
+import { Button, Card, Form, Input, Space, Tooltip, Skeleton } from 'antd';
 import {InfoCircleFilled} from '@ant-design/icons';
 import Context from './Context/Context';
 
@@ -30,6 +30,11 @@ const ExerciseTitle = ({phrase}) => {
   )
 }
 
+const validationStatusDefinition = {
+  SUCCESS: 'success',
+  ERROR: 'error'
+}
+
 const Exercise = ({phrase, refresh}) => {
 
   const [form] = Form.useForm();
@@ -56,11 +61,6 @@ const Exercise = ({phrase, refresh}) => {
   return(
     phrase ? 
     <div className="Exercise">
-      <Space direction="horizontal">
-      <div className="Answer">
-      </div>
-      </Space>
-      
       <Card title={<ExerciseTitle phrase={phrase}/>} bordered={false} style={{ width: 300 }}>
       <Form form={form} layout="vertical">
           <Form.Item 
@@ -73,14 +73,14 @@ const Exercise = ({phrase, refresh}) => {
             <Input onChange={handleAnswerChange} value={answer} autoComplete="off"/>
           </Form.Item>
           <Form.Item >
-            <Space>
+            { answerValidation.status === validationStatusDefinition.SUCCESS ?
+              <Button type="default" htmlType="submit" onClick={() => refresh()}>
+                Next phrase
+              </Button> :
               <Button type="primary" htmlType="submit" onClick={handleCheck}>
                 Check
-              </Button>
-              <Button type="default" htmlType="submit" onClick={() => refresh()}>
-                Refresh
-              </Button>
-            </Space>
+              </Button>   
+            }
           </Form.Item>
         </Form>
         <Context text={phrase.context} phrase={phrase.en}/>
