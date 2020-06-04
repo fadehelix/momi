@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/momi/static/css/main.69240eb1.chunk.css",
-    "main.js": "/momi/static/js/main.7892606b.chunk.js",
-    "main.js.map": "/momi/static/js/main.7892606b.chunk.js.map",
+    "main.js": "/momi/static/js/main.c41878d7.chunk.js",
+    "main.js.map": "/momi/static/js/main.c41878d7.chunk.js.map",
     "runtime-main.js": "/momi/static/js/runtime-main.b05cd144.js",
     "runtime-main.js.map": "/momi/static/js/runtime-main.b05cd144.js.map",
     "static/css/2.2908a31a.chunk.css": "/momi/static/css/2.2908a31a.chunk.css",
     "static/js/2.498e11e0.chunk.js": "/momi/static/js/2.498e11e0.chunk.js",
     "static/js/2.498e11e0.chunk.js.map": "/momi/static/js/2.498e11e0.chunk.js.map",
     "index.html": "/momi/index.html",
-    "precache-manifest.e980a73c3d01557e3b52d1497f0cf6e5.js": "/momi/precache-manifest.e980a73c3d01557e3b52d1497f0cf6e5.js",
+    "precache-manifest.936dafda60eb79914196021450b46100.js": "/momi/precache-manifest.936dafda60eb79914196021450b46100.js",
     "service-worker.js": "/momi/service-worker.js",
     "static/css/2.2908a31a.chunk.css.map": "/momi/static/css/2.2908a31a.chunk.css.map",
     "static/css/main.69240eb1.chunk.css.map": "/momi/static/css/main.69240eb1.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.2908a31a.chunk.css",
     "static/js/2.498e11e0.chunk.js",
     "static/css/main.69240eb1.chunk.css",
-    "static/js/main.7892606b.chunk.js"
+    "static/js/main.c41878d7.chunk.js"
   ]
 }
