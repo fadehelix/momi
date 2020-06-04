@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Card, Form, Input, Space, Tooltip, Skeleton } from 'antd';
+import { Button, Card, Form, Input, Space, Tooltip } from 'antd';
 import {InfoCircleFilled} from '@ant-design/icons';
 import Context from './Context/Context';
 

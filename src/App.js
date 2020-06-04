@@ -1,11 +1,14 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import { Button, Drawer, Layout, Spin, Space} from 'antd';
+import Papa from 'papaparse';
+
 import Table from './components/Table/Table';
+import Exercise from './components/Exercise/Exercise';
+
+import logoImage from './logo.png';
+
 import './App.scss';
 import './ant-design.overrides.scss';
-
-import Papa from 'papaparse';
-import Exercise from './components/Exercise/Exercise';
 
 const getRandomArrayIndexWithRange = (min, max) => Math.ceil(Math.random() * (max - 1- min));
 const getRandomPhrase = (sheetData) => {
@@ -55,7 +58,10 @@ function App() {
   return (
     <Layout className="App">
       <Header className="AppHeader">
-        <h1 className="AppName">Momi</h1>
+        <div className="AppLogo">
+          <img src={logoImage} alt="App logo" className="AppLogo__image"/>
+        </div>
+        <h1 className="AppName">Phraser</h1>
         <p className="AppSlogan">English - Polish scrum dictionary </p>
       </Header>
       {!sheetData.length ? 
