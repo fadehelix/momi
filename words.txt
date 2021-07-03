@@ -1,0 +1,8 @@
+Sole Person |	Jedyna osoba |	The Product Owner is the Sole Person responsible for managing the Product Backlog
+Facilitating |	ułatwiać	| The Scrum Master serves the Product Owner in several ways, including: (...) Facilitating Scrum events as requested or needed
+uphold |	podtrzymywać	|Three pillars uphold every implementation of empirical process control: transparency, inspection, and adaptation
+accountable	| odpowiedzialny |	The Product Owner may do the above work, or have the Development Team do it. However, the Product Owner remains accountable.
+to forecast |	przewidywać	| The Development Team works to forecast the functionality that will be developed during the Sprint
+to undertake the work |	podjąć pracę |	The Development Team self-organizes to undertake the work in the Sprint Backlog, both during Sprint Planning and as needed throughout the Sprint
+encourage	| zachęcać |	The Scrum Master encourages the Scrum Team to improve, within the Scrum process framework, its development process and practices to make it more effective and enjoyable for the next Sprint
+emerges	| wyłaniać się	| The Development Team modifies the Sprint Backlog throughout the Sprint, and the Sprint Backlog emerges during the Sprint
